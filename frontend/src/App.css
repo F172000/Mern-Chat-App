@@ -67,6 +67,16 @@ width: 100%;
 height: 90%;
 overflow-y: hidden;
 }
+.stylespinner{
+    align-self: center;
+    margin: auto;
+}
+.stylesinglechat{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3px;
+}
 .chatbox{
     align-items: center;
     flex-direction: column;
@@ -77,4 +87,10 @@ overflow-y: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.messages{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }

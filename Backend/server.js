@@ -8,6 +8,7 @@ const color=require('colors');
 dotenv.config();
 const userRoutes=require('./routes/userRoutes');
 const chatRoutes=require('./routes/chatRoutes');
+const messageRoutes=require('./routes/messageRoutes');
 const {notFound,errorHandler}=require('./middleware/errorMiddleware');
 app.use(cors());
 connectDB();
@@ -17,6 +18,7 @@ res.send("API is running successfully");
 });
 app.use('/api/user',userRoutes);
 app.use('/api/chat',chatRoutes);
+app.use('/api/message',messageRoutes);
 //Error handling middlewares
 app.use(notFound);
 app.use(errorHandler);

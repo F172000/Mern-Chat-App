@@ -82,10 +82,7 @@ fetchChats();
   key={chat._id}
   >
     <Text>
-{!chat.Groupchat?
-getsender(loggeduser,chat.users)
-: chat.chatName
-}
+{!chat.Groupchat? getsender(loggeduser,chat.users): chat.chatName}
 </Text>
   </Box>
 ))}

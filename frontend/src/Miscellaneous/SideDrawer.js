@@ -151,8 +151,8 @@ onclose();
       {loading? (
        <ChatLoading/>
       ):(
-researchresult?.map((data)=>(
-  <UserListItem key={data._id} user={data} handleFunction={()=>accessChat(data._id)}/>
+researchresult?.map((person)=>(
+  <UserListItem key={person._id} user={person} handleFunction={()=>accessChat(person._id)}/>
 ))
       )}
       {loadingchat && <Spinner ml="auto" d='flex'/>}

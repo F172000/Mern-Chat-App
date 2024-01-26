@@ -8,7 +8,7 @@ import axios from 'axios';
 import UserBadgeItem from '../components/Authentication/UserAvatar/UserBadgeItem';
 import UserListItem from '../components/Authentication/UserAvatar/UserListItem';
 axios.defaults.baseURL=process.env.REACT_APP_SERVER_DOMAIN;
-export default function UpdateGroupChatModal({fetchagain,setfetchagain}) {
+export default function UpdateGroupChatModal({fetchagain,setfetchagain,fetchMessages}) {
     console.log(fetchagain);
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [groupchatName,setgroupchatName]=useState();
@@ -42,6 +42,7 @@ export default function UpdateGroupChatModal({fetchagain,setfetchagain}) {
         },config);
         console.log(data);
         user1.id==user.id? setselectedchat():setselectedchat(data);
+        fetchMessages();
         setfetchagain(!fetchagain);
         console.log("after",fetchagain);
         setloading(false);
